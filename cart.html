@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Cart — DudeGifts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="index.html"><span class="logo-mark">DG</span><span>DudeGifts</span></a>
+<button class="menu" aria-label="Open menu">☰</button>
+<div class="nav-links">
+<a href="index.html">Home</a><a href="gifts.html">Physical Gifts</a><a href="digital-gifts.html">Digital Gifts</a><a href="surprise-events.html">Surprise Events</a><a href="categories.html">Categories</a><a href="custom-gift.html">Custom Gift</a><a href="about.html">About</a><a href="cart.html" class="cart-nav">Cart <span class="cart-count">0</span></a><a href="contact.html">Contact</a>
+</div>
+</nav>
+<main>
+<section class="page-hero cart-hero">
+<div class="container">
+<div class="hero-title-glass">
+<div class="eyebrow">DudeGifts</div>
+<h1>Your Cart</h1>
+<p>Review your selected gifts and confirm everything together. No login required.</p>
+</div>
+</div>
+</section>
+<section class="section cart-section">
+<div class="container">
+<div id="cartEmpty" class="cart-empty glass-panel">
+<h2>Your cart is empty</h2>
+<p>Add products from Physical Gifts, Digital Gifts or Surprise Events.</p>
+<a class="btn primary" href="gifts.html">Explore Gifts →</a>
+</div>
+<div id="cartContent" class="cart-layout" hidden>
+<div class="cart-items" id="cartItems"></div>
+<aside class="cart-summary glass-panel">
+<div class="eyebrow">Order Summary</div>
+<h2>Confirm Your Order</h2>
+<div class="summary-row"><span>Items</span><b id="cartItemCount">0</b></div>
+<div class="summary-row total"><span>Total</span><b id="cartTotal">₹0</b></div>
+<p class="cart-note">No account or login is required. Your final order will be sent to DudeGifts through WhatsApp.</p>
+<button class="btn primary cart-confirm" id="confirmCart">Confirm Order on WhatsApp →</button>
+<button class="btn secondary" id="clearCart">Clear Cart</button>
+</aside>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div><h3>DudeGifts</h3><p>Thoughtful gifts. Beautiful memories. Meaningful moments.</p></div><div><b>Explore</b><a href="gifts.html">Physical Gifts</a><a href="digital-gifts.html">Digital Gifts</a><a href="surprise-events.html">Surprise Events</a></div><div><b>Connect</b><a href="custom-gift.html">Create Something Special</a><a href="contact.html">Contact Us</a><a href="about.html">Our Story</a></div></div><div class="container copy">© 2026 DudeGifts — Gifts are emotions.</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
