@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DudeGifts — Memory Atelier</title>
+<meta name="description" content="DudeGifts — thoughtful physical gifts, digital stories, surprise experiences and custom creations.">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="announcement">Personalised gifting · made with feeling · Hyderabad</div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <button class="icon menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <a class="logo" href="#top">DUDE<span>GIFTS</span></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a class="nav-link active" data-section="shop" href="#shop">Shop</a>
+      <a class="nav-link" data-section="custom" href="#custom">Custom</a>
+      <a class="nav-link" data-section="story" href="#story">Our Story</a>
+      <a class="nav-link" data-section="contact" href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon" id="searchBtn" aria-label="Search gifts">⌕</button>
+      <button class="icon" id="bagBtn" aria-label="Gift Box">□<span class="bag-count">0</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile navigation lives outside the sticky/backdrop header so it can cover the full viewport. -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+  <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+    <div class="mobile-menu-kicker">DUDEGIFTS · THE MEMORY ATELIER</div>
+    <div class="mobile-menu-links">
+      <a data-section="shop" href="#shop">Shop <span>↗</span></a>
+      <a data-section="custom" href="#custom">Custom Gifts <span>↗</span></a>
+      <a data-section="story" href="#story">Our Story <span>↗</span></a>
+      <a data-section="contact" href="#contact">Contact <span>↗</span></a>
+    </div>
+    <div class="mobile-menu-foot">PERSONALISED · MADE WITH CARE · HYDERABAD</div>
+  </div>
+</div>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">The Memory Atelier · DudeGifts</div>
+      <h1>Make a memory.<br><em>Give it a place.</em></h1>
+      <p>Thoughtful keepsakes, digital stories, surprise experiences and custom creations — designed around one person and the little details that make them yours.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#shop">Find their gift ↗</a>
+        <a class="btn btn-outline" href="#custom">Create something personal</a>
+      </div>
+      <div class="hero-meta"><span>PERSONALISED</span><i></i><span>MADE WITH CARE</span><i></i><span>NO LOGIN</span></div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo photo-main"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1100&q=90" alt="Wrapped gift"><span class="photo-label">01 / THE GIFT</span></div>
+      <div class="photo photo-tall"><img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=800&q=90" alt="Gift box"><span class="photo-label">02 / THE DETAIL</span></div>
+      <div class="photo photo-small"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=90" alt="Celebration"><span class="photo-label">03 / THE MOMENT</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="container">
+    <div class="section-head">
+      <h2>Four ways to make<br>their moment matter.</h2>
+      <p>Everything lives under Shop — physical keepsakes, digital surprises, real-world experiences and one-of-one custom creations.</p>
+    </div>
+    <div class="category-grid">
+      <a class="category" href="#products" data-filter-link="physical"><small>01</small><div><h3>Physical Gifts</h3><p>Keepsakes they can hold, keep and revisit.</p><span class="arrow">↗</span></div></a>
+      <a class="category" href="#products" data-filter-link="digital"><small>02</small><div><h3>Digital Gifts</h3><p>Interactive stories and messages, made to open anywhere.</p><span class="arrow">↗</span></div></a>
+      <a class="category" href="#products" data-filter-link="surprise"><small>03</small><div><h3>Surprise Experiences</h3><p>Planned moments, reveals and celebrations around them.</p><span class="arrow">↗</span></div></a>
+      <a class="category category-custom" href="#custom"><small>04</small><div><h3>Custom Gifts</h3><p>Your idea, shaped into something completely personal.</p><span class="arrow">↗</span></div></a>
+    </div>
+
+    <div id="products" style="padding-top:85px">
+      <div class="toolbar">
+        <div class="filters">
+          <button class="filter active" data-filter="all">All Gifts</button>
+          <button class="filter" data-filter="physical">Physical</button>
+          <button class="filter" data-filter="digital">Digital</button>
+          <button class="filter" data-filter="surprise">Surprise</button>
+          <button class="filter custom-filter" type="button" data-custom-scroll>Custom</button>
+        </div>
+        <input id="search" aria-label="Search gifts" placeholder="Search gifts..." style="padding:11px 14px;border:1px solid var(--line);background:transparent;outline:none">
+      </div>
+      <div class="products" id="productGrid"></div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="container">
+    <div class="story">
+      <div>
+        <div class="eyebrow" style="color:var(--sand)">A gift should feel like them</div>
+        <h2>Hold it.<br>Open it.<br>Live it.</h2>
+        <p>Some memories belong on a shelf. Some belong on a screen. Some deserve an entire evening. DudeGifts brings all three together in one thoughtful studio.</p>
+        <a class="btn btn-outline" href="#shop">Explore the collection →</a>
+      </div>
+      <div class="story-art"></div>
+    </div>
+  </div>
+</section>
+
+<section id="custom" class="custom-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The Custom Atelier</div>
+        <h2>You imagine it.<br><em>We make it real.</em></h2>
+      </div>
+      <p>Have an idea that doesn't exist in a catalogue? Give us the details. Our studio will turn the memory, person and feeling into a gift concept made around them.</p>
+    </div>
+
+    <div class="custom-layout">
+      <div class="custom-intro">
+        <span class="atelier-number">04 / CUSTOM STUDIO</span>
+        <h3>A gift with<br>no template.</h3>
+        <p>Tell us what you are celebrating, who it is for and what you have imagined. You do not need a finished idea — a feeling is enough.</p>
+        <div class="custom-steps">
+          <div><b>01</b><span>Share the story</span></div>
+          <div><b>02</b><span>We shape the concept</span></div>
+          <div><b>03</b><span>You approve the direction</span></div>
+        </div>
+      </div>
+
+      <form class="custom-form" id="customForm">
+        <div class="form-heading">
+          <span>START A CUSTOM REQUEST</span>
+          <strong>Let's make something personal.</strong>
+        </div>
+        <div class="form-grid">
+          <label>Your name<input required name="name" placeholder="Your name"></label>
+          <label>Phone / WhatsApp<input required name="phone" placeholder="+91 XXXXX XXXXX"></label>
+          <label>Gift for<input required name="recipient" placeholder="Who is this for?"></label>
+          <label>Occasion<select required name="occasion">
+            <option value="">Select occasion</option>
+            <option>Birthday</option><option>Anniversary</option><option>Wedding</option>
+            <option>Baby / First Birthday</option><option>Proposal</option><option>Farewell</option><option>Other</option>
+          </select></label>
+          <label>Budget<select name="budget">
+            <option value="">Choose a range</option>
+            <option>Under ₹1,000</option><option>₹1,000 – ₹3,000</option><option>₹3,000 – ₹7,000</option><option>₹7,000+</option>
+          </select></label>
+          <label>Preferred format<select name="format">
+            <option value="">Choose one</option><option>Physical gift</option><option>Digital gift</option><option>Surprise experience</option><option>Combination</option>
+          </select></label>
+        </div>
+        <label class="full-label">Tell us your idea<textarea required name="idea" rows="5" placeholder="Describe the person, memory, colours, style, date or anything you already have in mind..."></textarea></label>
+        <label class="full-label">Reference link (optional)<input name="reference" placeholder="Pinterest / Instagram / Google Drive link"></label>
+        <button class="btn btn-primary custom-submit" type="submit">Send to the Studio <span>↗</span></button>
+        <div class="form-success" id="customSuccess" role="status">
+          <b>✓ Request received.</b>
+          <span>Your custom brief is ready. We will use these details to shape the first concept.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Contact the Atelier</div>
+        <h2>Let's make<br>something memorable.</h2>
+      </div>
+      <p>For custom requests, event planning, collaborations or product questions, start a conversation with the studio.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:hello@dudegifts.in">Email the Studio →</a>
+      <a class="btn btn-outline" href="#custom">Start a Custom Request</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">DUDEGIFTS<p>A memory atelier for people who gift with feeling.</p></div>
+    <div><h4>Shop</h4><a href="#products" data-footer-filter="physical">Physical Gifts</a><a href="#products" data-footer-filter="digital">Digital Gifts</a><a href="#products" data-footer-filter="surprise">Surprises</a><a href="#custom">Custom Gifts</a></div>
+    <div><h4>Studio</h4><a href="#custom">Custom Studio</a><a href="#story">Our Story</a><a href="#contact">Contact</a></div>
+    <div><h4>Follow</h4><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp ↗</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube ↗</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 DudeGifts</span><span>Made with feeling in Hyderabad.</span></div>
+</footer>
+
+<div class="modal" id="productModal" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="close" id="closeModal" aria-label="Close product">×</button>
+    <div class="modal-grid">
+      <div class="modal-image"><img id="modalImage" alt=""></div>
+      <div class="modal-info">
+        <small id="modalCategory"></small>
+        <h2 id="modalTitle"></h2>
+        <div class="price" id="modalPrice"></div>
+        <p id="modalDescription"></p>
+        <button class="btn btn-primary" id="modalAdd">Add to Gift Box →</button>
+        <div class="success" id="modalSuccess">✓ Added to cart successfully.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="drawer" id="drawer">
+  <aside class="drawer-panel">
+    <div class="drawer-head"><strong style="font:400 30px Georgia,serif">Your Gift Box</strong><button class="close" style="position:static;width:38px;height:38px" id="closeDrawer">×</button></div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot"><div class="total"><span>Total</span><span id="drawerTotal">₹0</span></div><div class="drawer-actions"><button class="btn btn-outline clear-cart" id="clearCart" type="button">Clear Gift Box</button><button class="btn btn-primary whatsapp-order" id="whatsappOrder" type="button">Order on WhatsApp <span>↗</span></button></div><p class="checkout-note">Your Gift Box will be converted into a WhatsApp order message.</p></div>
+  </aside>
+</div>
+
+<div class="toast" id="toast"><b>✓ Added to cart successfully</b><br><span id="toastText">Your gift is now in the Gift Box.</span></div>
+
+<script src="app.js"></script>
+</body>
+</html>
